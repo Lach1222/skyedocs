@@ -90,9 +90,9 @@ i.md-icon {
 /* Inserts Skye logo */
 .md-logo:before{
   /*display: block;*/
-  display: none;
+  display: block;
   content: ' ';
-  background-image: url('../img/skye.png');
+  background-image: url('../img/skye_white.png');
   background-size: inherit auto;
   background-position: center;
   height: 30px;
