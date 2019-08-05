@@ -4,15 +4,15 @@
 ## Card Features 
 **Skye** is integrated online.
 
-### 90 days breathing space
+**90 days breathing space**
 
 90 days Interest Free and no repayments on every card purchase
 
-### No foreign transaction fees
+**No foreign transaction fees**
 
 No foreign transaction fees for online and overseas purchases
 
-### SkyePlans
+**SkyePlans**
 
 Convert card purchases of $250 or more to a 9, 12, or 15 month Interest Free Instalment Plan (**SkyePlan**) for a small establishment fee
 

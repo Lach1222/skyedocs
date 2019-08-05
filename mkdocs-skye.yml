@@ -55,7 +55,7 @@ theme:
 extra_css: [css/jquery.modal.min.css, css/custom.css, css/custom_index.css]
 extra_javascript: [js/jquery.modal.js]
 extra:
-   domain: shophumm.com.au
+   domain: skyecard.com.au
    domain_postfix: .com.au
    currency_abbr: AUD
    country_abbr: AU

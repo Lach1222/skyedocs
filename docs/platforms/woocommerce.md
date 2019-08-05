@@ -1,15 +1,21 @@
 #Integrating on WooCommerce
 
-## Locate your **humm** Credentials
+## Locate your **Skye** Credentials
 
-To integrate **humm** you will need your:
+To integrate **Skye** you will need your:
 
-* Merchant Number
-* API Key
+* Merchant Id
+* Secret Key
+* Operator Id
+* Password
+* Product Code
 
-##Integrating **humm**
+##Integrating **Skye**
 
-1 - On the left-hand side of your WordPress admin page, click **Plugins > Add New** then search for **humm** in top-right search field.
+1 - Download the **Skye** Woocommerce plugin: https://github.com/skyecard/woocommerce-skye-online
+![1.png](/img/platforms/woocommerce/1.png)
+
+2 - On the left-hand side of your WordPress admin page, click **Plugins > Add New** then search for **humm** in top-right search field.
 
 ![1.png](/img/platforms/woocommerce/1.png)
 
