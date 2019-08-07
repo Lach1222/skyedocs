@@ -1,17 +1,18 @@
 # Integrating on OpenCart
 
-**Humm** is available for the following versions of OpenCart:
+**Skye** is available for the following versions of OpenCart:
 
-* 2.0.x, 2.1.x, 2.2.x
-* 2.3.x
 * 3.0.x
 
-##Locate your humm Credentials
+## Locate your **Skye** Credentials
 
-To integrate **humm** you will need your
+To integrate **Skye** you will need your:
 
-* Merchant Number
-* API Key
+* Merchant Id
+* Secret Key
+* Operator Id
+* Password
+* Product Code
 
 ## Installation using Extension Installer
 

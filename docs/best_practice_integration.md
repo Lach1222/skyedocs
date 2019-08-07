@@ -2,10 +2,13 @@
 
 <h3 style="color:gray; font-style:italic">Convert more browsers into <b>shoppers</b></h3>
 
-## Showcase **humm**
-Our default marketing assets for your website inform customers about **humm**, convert more browsers into shoppers and increase average basket size.
+## Showcase **Skye**
+To ensure you get maximum benefit from **Skye** on your website we recommend you integrate **Skye** with your customer journey, letting customers they can get what they want today and pay it off over time, Interest Free.
 
-We are always testing to ensure our messages work with customers and improve your results with **humm** so we may change assets at times. By using assets hosted by us, you can be sure you are always using the most effective **humm** messaging.
+As we’re a licensed and regulated credit provider we both have to adhere to compliance guidelines for all Skye advertising. As such we recommend that you use our library of assets on [Skye Tools](https://tools.skyecard.com.au/) rather than spending time creating your own. 
+
+If your brand requires you to do so then please make sure you [send them through to us so](mailto:cards.advertapproval@flexigroup.com.au) we can sign them off before anything goes live. 
+
 
 The below assets are available via our integration guides.
 
@@ -39,9 +42,9 @@ Let your customers know you accept **humm**.
 
 ## Product page widgets
 
-Add **humm** messaging as close as you can to the price of the item.
+Add **Skye** messaging as close as you can to the price of the item.
 
-The **humm** pricing widget is tailored to the price of the item on your website.
+The **Skye** pricing widget is tailored to the price of the item on your website.
 
 **Sample product page.**
 
@@ -51,11 +54,11 @@ The **humm** pricing widget is tailored to the price of the item on your website
 
 **Items < $1000**
 
-<script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=200"></script>
-
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&productPrice=300" debug="true"></script>
+<br>
 **Items > $1000**
 
-<script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=1500"></script>
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&productPrice=1100" debug="true"></script>
 
 Widgets are available [here](/widgets/price_info/).
 
@@ -103,11 +106,11 @@ Remind customers of the benefits of paying with humm at the Cart Page
 
 **Items < $1000**
 
-<script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=200"></script>
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&productPrice=300" debug="true"></script>
 
 **Items > $1000**
 
-<script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=1500"></script>
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&productPrice=1500" debug="true"></script>
 
 Widgets are available [here](/widgets/price_info/).
 
