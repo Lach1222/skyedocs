@@ -16,23 +16,20 @@ The below assets are available via our integration guides.
 
 ## Home page banner and footer
 
-Let your customers know you accept **humm**.
+Let your customers know you accept **Skye**.
 
 ![/widgets/banners](/img/best_integration_guidelines/Banner-placement-web3.png)
 
-* Top strip banners are available [here](/widgets/banners).
+* Banners are available [here](https://tools.skyecard.com.au/digital).
 
-<a href="/widgets/banners">
-    <img class="box-shadow" src="/img/best_integration_guidelines/Pay_in_slices_sml.png">
+* Example: *
+
+<a href="https://tools.skyecard.com.au/sites/default/files/2018-05/Generic_WhyIF_web_bannerGrad_tb.png">
+    <img class="box-shadow" src="https://tools.skyecard.com.au/sites/default/files/2018-05/Generic_WhyIF_web_bannerGrad_tb.png">
 </a>
 
-* Banners are available [here](/widgets/banners).
 
-<a href="/widgets/banners">
-    <img class="box-shadow" src="/img/best_integration_guidelines/LTBTsml.png">
-</a>
-
-* The **humm** payment tile is available [here](https://tools.shophumm.com.au/logos-images).
+* The **Skye** payment tile is available [here](https://tools.shophumm.com.au/logos-images).
 
 <a href="https://tools.shophumm.com.au/logos-images">
     <img class="box-shadow" src="/img/best_integration_guidelines/payment_sml.png">
@@ -135,6 +132,34 @@ This is your last chance to let your customers know they have the option to pay 
 Widgets are available [here](/widgets/price_info/).
 
 - - -
+
+## Skye as payment option
+
+Skye can be integrated as a payment option in your E-commerce.
+
+**New Customer**
+
+<video width="320" height="240" controls>
+  <source src="/vid/best_integration_guidelines/Skye_New_Customer_IFOL.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+**Existing Customer**
+
+<video width="320" height="240" controls>
+  <source src="/vid/best_integration_guidelines/Skye_Existing_Customer_IFOL.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+The following plugins are available:
+
+- [WooCommerce](/ecommerce/woocommerce/)
+- [Magento 1](/ecommerce/magento_1/)
+- [OpenCart 3](/ecommerce/opencart/)
+
+For custom integration please refer to the [developer resources](/developer_resources/introduction/).
+
+- - - 
 <br>
 
 <div style="text-align:center" class="window">
