@@ -1,17 +1,20 @@
 # Magento 1
 
-## Locate your **humm** Credentials
+## Locate your **Skye** Credentials
 
-To integrate **humm** you will need your
+To integrate **Skye** you will need your:
 
-* Merchant Number
-* API Key
+* Merchant Id
+* Secret Key
+* Operator Id
+* Password
+* Product Code
 
 ## Plugin Installation / Upgrade
 
 1 - You can create a backup of your store by navigating to **System** -> **Tools** -> **Backup**.
 
-2 - Download the **humm** plugin zip from [GitHub](https://github.com/shophumm/humm-magento1.x/releases/latest).
+2 - Download the **humm** plugin zip from [GitHub](https://github.com/skyecard/skye-online-magento-1.9).
 
 3 - Unzip it, then copy the following folders into the corresponding folders under your Magento root directory.
 

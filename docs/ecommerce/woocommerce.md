@@ -12,7 +12,7 @@ To integrate **Skye** you will need your:
 
 ##Integrating **Skye**
 
-1 - Download the **Skye** Woocommerce plugin: [https://github.com/skyecard/woocommerce-skye-online](https://github.com/skyecard/woocommerce-skye-online)
+1 - Download the **Skye** Woocommerce plugin: [here](https://github.com/skyecard/skye-online-opencart/releases)
 
 ![1.png](/img/ecommerce/woocommerce/1.png)
 
