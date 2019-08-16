@@ -87,9 +87,11 @@ For example, this is a block of HTML extracted from a typical WooCommerce produc
 
 In this case, we use the urlencoded ```%23priceinfo ``` to refer to the id ```#priceinfo```
 
-<script src="https://widgets.%domain%/content/scripts/price-info.js?price-selector=%23priceinfo"></script>
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&amp;price-selector=%23priceinfo&mode=weekly" debug="true"></script>
+
+
 ```
-<script src="https://widgets.%domain%/content/scripts/price-info.js?price-selector=%23priceinfo"></script>
+<script id="skye-widget"src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=MERCHANT_CODE&price-selector=CSS_SELECTOR_URL_ENCODED&mode=weekly"></script>
 ```
 
 You could also use ```price-selector=.woocommerce-Price-amount.amount``` or any CSS selectors to help identify the price element.
