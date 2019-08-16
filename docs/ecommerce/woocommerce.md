@@ -14,8 +14,6 @@ To integrate **Skye** you will need your:
 
 1 - Download the **Skye** Woocommerce plugin: [here](https://github.com/skyecard/skye-online-opencart/releases)
 
-![1.png](/img/ecommerce/woocommerce/1.png)
-
 2 - On the left-hand side of your WordPress admin page, click **Plugins > Add New**.
 
 ![2.png](/img/ecommerce/woocommerce/2.png)

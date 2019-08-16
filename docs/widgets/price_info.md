@@ -1,8 +1,12 @@
 # Price-info widget
 
+## What is a widget?
+
+A widget is a tag that will open a modal (a.k.a popup) when clicked. The content of the modal dialog provides additional information to the customer.
+
 ## How to use
 
-To use the price-info widget, you must select the corresponding type based on whether you offer **'Little things'** merchant, **'Big Things'** or **both**.
+To configure the widgets, simply copy the <script>..</script> tags below to your html content where you want them to appear and populate the highlighted fields (id, productPrice..etc.) with the correct values.
 
 > Contact <a href="mailto:pit@%domain%">pit@%domain%</a> if you're unsure what type of merchant you are.
 
@@ -13,41 +17,45 @@ Insert the script where you want the price-info widget to display replacing <cod
 * [Magetno 1](/widgets/price-info/magento_1)
 * [OpenCart 3](/widgets/price-info/opencart_3)
 
-## Widget behaviour
+## Skye price-info widgets
 
-There are three different types of price-info widgets depending on whether your **humm** account supports only **'Little things'**, only **'Big Things'** or **both**. See table below for possible bevahiours.
+### Default widget
 
-| | <= $1000 | $1000 < price <= $2000 | > $2000 |
-| -- | -- | -- | -- |
-| **Default** | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=200"></script> | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=1500"></script> | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=4000"></script> |
-| **Big Things Only** | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=200&BigOnly"></script> | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=1500&BigOnly"></script> | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=4000&BigOnly"></script> |
-| **Little Things Only** | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=200&LittleOnly"></script> | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=1500&LittleOnly"></script> | <script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=4000&LittleOnly"></script> |
+This widget displays the computed monthly installment amount.  The installment term used for computation is the longest term configured for the merchant in relation to the PRODUCT_PRICE provided.
 
-This behaviour effects all price-info widgets, including the dynamic price-info widget.
+Example: An amount of 2400 would automatically default to an 18 month term.
 
-### 'Little things' only
+**Product price:** 2400
 
-Using the following code if you are a **'Little things'** only merchant.
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&amp;productPrice=2400" debug="true"></script>
+
 ```
-<script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=PLACE_YOUR_PRODUCT_PRICE&LittleOnly"></script>
+<script id="skye-widget"src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=MERCHANT_CODE&productPrice=PRODUCT_PRICE"></script>
 ```
-Note the use of <code>&LittleOnly</code> parameter.
 
-### 'Big things' only
+###Fixed term widget
+This widget displays the computed installment amount against the provided term. This is ideal for promoting specific installment terms.
 
-Using the following code if you are a **'Big things'** only merchant.
-```
-<script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=PLACE_YOUR_PRODUCT_PRICE&BigOnly"></script>
-```
-Note the use of <code>&BigOnly</code> parameter.
+Example: An amount of 2500 would automatically default to an 18 month term. If merchant wants to promote 6 month terms, merchant just needs to supply the specific TERM  to the script.
 
-### Both 'Little things' and 'Big things'
+**Product price:** 2500
 
-Using the following code if you are both a **'Little things'** and **'Big things'** merchant.
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&amp;productPrice=2500&amp;term=6" debug="true"></script>
+
 ```
-<script src="https://widgets.%domain%/content/scripts/price-info.js?productPrice=PLACE_YOUR_PRODUCT_PRICE"></script>
+<script id="skye-widget"src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=MERCHANT_CODE&price-selector=CSS_SELECTOR_URL_ENCODED&term=TERM"></script>
 ```
-Note that there is no extra parameter required.
+
+###Weekly widget
+This widget displays the computed weekly installment amount. 
+
+**Product price:** 700
+
+<script id="skye-widget" src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=D9168&amp;productPrice=700&amp;mode=weekly" debug="true"></script>
+
+```
+<script id="skye-widget"src="https://d1y94doel0eh42.cloudfront.net/content/scripts/skye-widget.js?id=MERCHANT_CODE&productPrice=PRODUCT_PRICE&mode=weekly"></script>
+```
 
 ## Widget features
 ### 1. Dynamically get product price

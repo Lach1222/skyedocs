@@ -48,22 +48,18 @@ _Next: Continue onto Finalising Installation [below](#finalising-installation)._
 
 ![2.png](/img/ecommerce/opencart/2.png)
 
-3 - Locate **humm** then click **Install**.
+3 - Locate **Skye** then click **Install**.
 
-![3.png](/img/ecommerce/opencart/3.png)
+![3.png](/img/ecommerce/opencart/opencart_install.png)
 
-4 - Click **Edit** on the right, this will open your **humm** settings page.
+4 - Click **Edit** on the right, this will open your **Skye** settings page.
 
-![4.png](/img/ecommerce/opencart/4.png)
+![4.png](/img/ecommerce/opencart/opencart_configure.png)
+
+![4.png](/img/ecommerce/opencart/opencart_configuration.png)
 
 5 - Ensure plugin is configured as below:
 
-Setting | Description
---- | ---
-Status | Enabled
-Order Status Completed | `Completed`
-Order Status Pending | `Processing`
-Order Status Failed | `Failed`
-Geo Zone | AU or NZ
-Environment | Sandbox (Test) for testing else Live or Other.
-Sort Order | `1` This will show humm first.
+Hovering on the ![question_mark.png](/img/ecommerce/woocommerce/question_mark.png) will give details on what the fields are for.
+
+For testing, make sure **Environment Sandbox** is selected. 
