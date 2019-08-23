@@ -286,11 +286,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Widgets + Banners
+      Widgets
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Widgets + Banners
+        Widgets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -324,63 +324,15 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../widgets/banners/" title="Banners" class="md-nav__link">
-      Banners
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
-    <label class="md-nav__link" for="nav-4-4">
-      Landing Pages
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
-        Landing Pages
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../widgets/landing_pages/introduction/" title="Introduction" class="md-nav__link">
-      Introduction
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
-    
-    <label class="md-nav__link" for="nav-4-5">
+    <label class="md-nav__link" for="nav-4-3">
       Widget Installation
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-5">
+      <label class="md-nav__title" for="nav-4-3">
         Widget Installation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -479,9 +431,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction
+      </label>
+    
     <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
       Introduction
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites-to-integration" title="Pre-requisites to integration" class="md-nav__link">
+    Pre-requisites to integration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -504,8 +492,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../checkout_api/" title="Checkout API" class="md-nav__link">
-      Checkout API
+    <a href="../checkout_web_service/" title="Checkout Web Services" class="md-nav__link">
+      Checkout Web Services
     </a>
   </li>
 
@@ -516,20 +504,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../refund_api/" title="Refund API" class="md-nav__link">
-      Refund API
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../signature_generation/" title="Signature Generation" class="md-nav__link">
-      Signature Generation
+    <a href="../sample_curl/" title="Sample test page" class="md-nav__link">
+      Sample test page
     </a>
   </li>
 
@@ -556,6 +532,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites-to-integration" title="Pre-requisites to integration" class="md-nav__link">
+    Pre-requisites to integration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -567,9 +566,42 @@
               
                 
 <h1 id="introduction">Introduction</h1>
-<p>We have used this API  ourselves to integrate <strong>humm</strong> as a payment option into a number of leading shopping cart platforms including Shopify, WooCommerce and Magento.</p>
-<p>Shopping carts vary in how they deal with and communicate transaction information and how they classify certain bits of information as either optional or mandatory. The <strong>humm</strong> Checkout API is intented to work with as many shopping carts as possible (regardless of whether they are SAAS or Plugin based and regardless or the programming language used.)</p>
-<p>In this guide, you will find instructions on the information you need to provide to <strong>humm</strong> and the formatting we expect. You will also find information on how to go about signing your request in order to protect against malicious attacks as well as session hijacking.</p>
+<p>While shopping on online merchant sites, customers will have the ability to select the Skye payment service during their checkout process. Selecting the Skye payment service, the merchant will first transfer customer information to the Skye system before transferring the customer onto the Skye origination website. Here the customer will enter information necessary to complete the Skye origination process. When the origination process has completed the customer will be transferred back to the merchant checkout page, and if approved, will be able to finalise their online purchase. Upon confirmation of the online purchase the merchant will be credited with the transaction amount. </p>
+<p>The Skye Online product is a revolving line of credit that supports transactions over an agreed minimum amount (usually a few hundred dollars).</p>
+<h2 id="architecture">Architecture</h2>
+<p>The Web Services provided are implemented using the SOAP Web Service standard which is a detailed and well supported standard. To use the Skye Online system a number of Web Services need to be called to setup a transaction and later to check the result of the transaction, and confirm it. </p>
+<p>This process begins by creating an object to hold information about the applicant and the merchant. Once the object has been created on the merchant system, it will be passed to the Skye system to create a new transaction. This process will provide you with a unique identifier for this new transaction. The user is then re-directed to the Skye system to continue their data entry. </p>
+<p>Once the user’s IFOL application has been accepted or rejected, they will be returned to the merchant site and given the option to confirm their choice of the Skye payment method if they have been approved.</p>
+<p>Merchants will interact with the Skye system via two components: </p>
+<ul>
+<li>Skye Web Service </li>
+<li>Skye Origination website </li>
+</ul>
+<h2 id="pre-requisites-to-integration">Pre-requisites to integration</h2>
+<p>Prior to commencing building integration to Skye web services, the following conditions are prefferred:</p>
+<ol>
+<li>
+<p>Availability of a test merchant website/environment. Requests for testing integration from a live website will not be entertained.</p>
+</li>
+<li>
+<p>SSL Certificate for Production Shopping Cart.</p>
+</li>
+<li>
+<p>SSL certificate for test (preferred). To mimic the production setup as close as possible so that no “new” bugs are  introduced during go-live, it is recommended that the test merchant website (shopping cart at least) have a working SSL certificate and testing is done on SSL .</p>
+</li>
+<li>
+<p>You have received the correct test credentials from Skye.</p>
+</li>
+<li>
+<p>Unique order number (preferred). </p>
+</li>
+<li>
+<p>Save shopping cart functionality (preferred). At times there might be issues during the final confirmation from the merchant website. In such cases Skye IT can manually settle the application on behalf of a customer. Therefore it is recommended that the merchant have the shopping cart saved with a unique reference that can be retrieved and processed.</p>
+</li>
+<li>
+<p>Sufficiently long timeout. To avoid issues where your shopping cart may time out while the applicant is completing the finance application. it is recommended that you have a 60 minute timeout on your shopping cart.</p>
+</li>
+</ol>
 
               
                 
