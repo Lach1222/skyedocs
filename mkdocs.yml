@@ -6,7 +6,6 @@ nav:
    - Shopify: ecommerce/shopify.md
    - WooCommerce: ecommerce/woocommerce.md
    - Magento 1: ecommerce/magento_1.md
-   - Magento 2: ecommerce/magento_2.md
    - OpenCart: ecommerce/opencart.md
 - Best Practice Integration: best_practice_integration.md
 - Widgets:

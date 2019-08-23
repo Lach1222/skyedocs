@@ -241,18 +241,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ecommerce/magento_2/" title="Magento 2" class="md-nav__link">
-      Magento 2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../ecommerce/opencart/" title="OpenCart" class="md-nav__link">
       OpenCart
     </a>
@@ -507,16 +495,13 @@
               
                 
 <h1 id="checkout-process">Checkout Process</h1>
-<p>Below is a chart that summarises the flow of a transaction when processing it using <strong>humm</strong>.</p>
-<p><img src="/img/api/1.png" alt="Humm Checkout Process"></p>
-<!-- **NOTE:** We have included a sample cURL script that you can use to test the **humm** sandbox gateway. You can find the script under [Sample cURL Script](../developer_resources/sample_curl.md) -->
-
-<p><strong>Step 1</strong>: The customer places an order in a shopping cart providing details such as their first/last name, email address etc. The customer chooses <strong>humm</strong> as the payment method.</p>
-<p><strong>Step 2</strong>: The customer is redirected to the <strong>humm</strong> checkout gateway via a <strong>HTTP POST</strong> (See <a href="/developer_resources/checkout_api/#request-post">Request POST</a> for details). Note that this post needs to be signed to ensure security (See <a href="/developer_resources/signature_generation/">Signature Generation</a> for details).</p>
-<p><strong>Step 3</strong>: The customer will then complete the purchase via the <strong>humm</strong> Service. Customers that cancel will be redirected back to the <code>x_url_cancel</code> URL.</p>
-<p><strong>Step 4</strong>: Once a decision has been reached ('Approved' or 'Declined'), <strong>humm</strong> will <strong>POST</strong> (Server to Server) to the provided <code>x_url_callback</code> URL  (See <a href="/developer_resources/checkout_api/#post-and-get-responses">Response POST</a> content).  </p>
-<p><strong>Step 5</strong>: The customer is then presented with an 'Approved' or 'Declined' page.  The customer is then redirected (<strong>GET</strong>) to the provided <code>x_url_complete</code> with the same <a href="/developer_resources/checkout_api/#post-and-get-responses">response</a> content as used in <strong>Step 4</strong>.  </p>
-<p><strong>Step 6</strong>: The transaction is now complete from <strong>humm</strong>'s side as well as the client's and shopping cart's point of views.</p>
+<p>The image below provides an overview of the interaction between merchant platform and the <strong>Skye</strong> Web service</p>
+<p><img src="/img/api/1.png" alt="Skye Checkout Process"></p>
+<p><strong>Step 1</strong>: The customer places an order in a shopping cart providing details such as their first/last name, email address etc. The customer chooses <strong>Skye</strong> as the payment method. When the user clicks submit, the <strong>Skye</strong> web service <a href="/developer_resources/checkout_web_service/#beginipltransaction">BeginIPLTransaction</a> is called.</p>
+<p><strong>Step 2</strong>: <strong>Skye</strong> web service <a href="/developer_resources/checkout_web_service/#beginipltransaction">BeginIPLTransaction</a> returns the TransactionId. Redirect the customer to <strong>Skye</strong> apply url and append the merchant Id and the returned transactionId as parameter.</p>
+<p><strong>Step 3</strong>: <strong>Skye</strong> will redirect to the provided merchant url(ReturnApprovedUrl, ReturnDeclineUrl , ReturnWithdrawUrl or ReturnReferUrl) from <strong>Step 1</strong> once a decision has been made.</p>
+<p><strong>Step 4</strong>: Call web service <a href="/developer_resources/checkout_web_service/#getipltransactionstatus">GetIPLTransactionStatus</a> to confirm status of transaction.</p>
+<p><strong>Step 5</strong>: If status is <strong>APPROVED</strong>, call web service <a href="/developer_resources/checkout_web_service/#commitipltransaction">CommitIPLTransaction</a> to finalise transaction in Skye and also update order as completed on merchant platfrom. Otherwise, update to the appropriate status.</p>
 
               
                 
