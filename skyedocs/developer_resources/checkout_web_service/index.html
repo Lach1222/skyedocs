@@ -597,6 +597,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#transactiondata-object-type" title="TransactionData Object Type" class="md-nav__link">
+    TransactionData Object Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addressdetails-object-type" title="AddressDetails Object Type" class="md-nav__link">
+    AddressDetails Object Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#street-type-code" title="Street Type Code" class="md-nav__link">
+    Street Type Code
+  </a>
+  
+</li>
+      
       
       
       
@@ -781,6 +802,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#transactiondata-object-type" title="TransactionData Object Type" class="md-nav__link">
+    TransactionData Object Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addressdetails-object-type" title="AddressDetails Object Type" class="md-nav__link">
+    AddressDetails Object Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#street-type-code" title="Street Type Code" class="md-nav__link">
+    Street Type Code
+  </a>
+  
+</li>
+      
       
       
       
@@ -824,7 +866,7 @@ The Skye web services are only accessible by registered merchants.</p>
 <tr>
 <td>TransactionInformation <strong>Required</strong></td>
 <td>This parameter contains all the information to be passed to the Skye system. Such as the applicant’s name and merchant site return URL.</td>
-<td>TransactionData</td>
+<td><a href="/developer_resources/checkout_web_service/#transactiondata-object-type">TransactionData</a></td>
 </tr>
 <tr>
 <td>SecretKey <strong>Required</strong></td>
@@ -922,6 +964,224 @@ The Skye web services are only accessible by registered merchants.</p>
 <p>This method will return a TransactionData object of the current Skye transaction, which contains all the information that was passed in the BeginIPLTransaction method call.</p>
 <h3 id="method-specification_3">Method Specification</h3>
 <p>The method input and output specification can be found here: <a href="https://applications.flexicards.com.au/IPL_service/ipltransaction.asmx?op=GetIPLTransaction">https://applications.flexicards.com.au/IPL_service/ipltransaction.asmx?op=GetIPLTransaction</a></p>
+<h2 id="transactiondata-object-type">TransactionData Object Type</h2>
+<p>The TransactionData object is a complex object type that is passed to the BeginIPLTransaction method in order to load applicant details and information about the merchant. </p>
+<p>This object contains the following values, most of these are optional (with different requirements for different products), though if customer details are available they will be automatically used in the Skye screens to make the application process easier for the customer: </p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Valdiation</th>
+<th>Required?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MerchantId</td>
+<td>The merchant id that has been provided to you by Skye.</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>OperatorId</td>
+<td>Operator ID that has been provided to you by Skye.</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Password that has been provided to you by Skye. <em>NB: DO NOT PASS THE ENCRYPTED PASSWORD, that is only used for the redirect.</em></td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>CreditProduct</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Offer</td>
+<td><strong>One</strong> of the Valid Offer ID’s provided to you by Skye</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>OrderNumber</td>
+<td>The merchant’s identifier for this application</td>
+<td></td>
+<td>No</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The description of the transaction</td>
+<td>Not used yet</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>The amount of  the transaction</td>
+<td>A numeric value above the agreed minimum, and below the agreed maximum (a range of 500 to 6000 is normal, but can be extended).</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ExistingCustomer</td>
+<td>Existing customer flag to indicate if the applicant is a returning customer of the retailer.</td>
+<td>Boolean</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>The salutation of the applicant.</td>
+<td>Must be one of the following values: Mr, Miss, Ms, Mrs, Dr, Prof, Rev, Sir, Unknown</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td>The first given name of an applicant</td>
+<td>2 - 32 characters</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>MiddleName</td>
+<td>The middle name(s) of an applicant</td>
+<td>1 - 32 characters</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Surname</td>
+<td>The surname of an applicant.</td>
+<td>2 - 32 characters</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>BillingAddress</td>
+<td>Holds the billing address details of an applicant</td>
+<td>See <a href="/developer_resources/checkout_web_service/#addressdetails-object-type">AddressDetails Object Type</a></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DeliveryAddress</td>
+<td>Holds the delivery address of an applicant</td>
+<td>See AddressDetails Object Type</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>WorkPhoneArea</td>
+<td>Area code for a work phone number</td>
+<td>2 numbers starting with a 0</td>
+<td>Required if WorkPhoneNumber supplied</td>
+</tr>
+<tr>
+<td>WorkPhoneNumber</td>
+<td>Phone number of a work phone</td>
+<td>8 digits long</td>
+<td>No</td>
+</tr>
+<tr>
+<td>HomePhoneArea</td>
+<td>Area code for a home phone number</td>
+<td>2 numbers starting with a 0</td>
+<td>Required if HomePhoneNumber supplied</td>
+</tr>
+<tr>
+<td>MobilePhoneNumber</td>
+<td>Applicant's mobile number</td>
+<td>10 numbers long, must start '04'</td>
+<td>No</td>
+</tr>
+<tr>
+<td>EmailAddress</td>
+<td>Applicant's email address</td>
+<td>Must be a valid email address</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ReturnApprovedUrl</td>
+<td>The return web address back to the merchant site when the application is APPROVED. If you add “transaction=[TRANSACTIONID]” to the end then it will be replaced with the actual Transaction ID upon returning.</td>
+<td>Must be a valid URL to return back to</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ReturnDeclineUrl</td>
+<td>The return web address back to the merchant site when the application is DECLINED. If you add “transaction=[TRANSACTIONID]” to the end then it will be replaced with the actual Transaction ID upon returning.</td>
+<td>Must be a valid URL to return back to</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ReturnWithdrawUrl</td>
+<td>The return web address back to the merchant site when the application is WITHDRAWN by the customer. If you add “transaction=[TRANSACTIONID]” to the end then it will be replaced with the actual Transaction ID upon returning.</td>
+<td>Must be a valid URL to return back to</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="addressdetails-object-type">AddressDetails Object Type</h2>
+<p>The AddressDetails object is a complex object type that is passed to the <a href="/developer_resources/checkout_web_service/#beginipltransaction">BeginIPLTransaction</a> method inside a <a href="/developer_resources/checkout_web_service/#transactiondata-object-type">TransactionData object</a>, which holds information about an applicant’s address. </p>
+<p>This object contains the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Valdiation</th>
+<th>Required?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AddressType</td>
+<td>The type of address supplied</td>
+<td>Must be one of: Residential or Delviery</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>UnitNumber</td>
+<td>Address unit number</td>
+<td>1 - 8 characters long</td>
+<td>No</td>
+</tr>
+<tr>
+<td>StreetNumber</td>
+<td>Address street number</td>
+<td>1 - 8 characters long</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>StreetName</td>
+<td>Address street name</td>
+<td>2 - 64 characters long</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>StreetType</td>
+<td>Address street type</td>
+<td>Must be a valid street type. Please see Street type codes.</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>Suburb</td>
+<td>Address suburb name</td>
+<td>2 - 64 characters long</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>State</td>
+<td>State of an address</td>
+<td>Must be one of the followign values: NSW, VIC, TAS, WA, SA, ACT, NT, QLD</td>
+<td>Can be blank</td>
+</tr>
+<tr>
+<td>Postcode</td>
+<td>Address postcode</td>
+<td>4 digits</td>
+<td>Can be blank</td>
+</tr>
+</tbody>
+</table>
+<h2 id="street-type-code">Street Type Code</h2>
+<p>The street type supplied with addresses MUST be one of these; any other will cause the application to be declined.</p>
 
               
                 
