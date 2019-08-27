@@ -35,7 +35,7 @@ To update the documentation the following steps need to be done.
 * Make your changes to the documentation.
 * Run the web-application locally:  
 
-        mkdocs serve --config-file mkdocs.yml
+        mkdocs serve
 
 
 * Commit your changes and push your branch back up to GitHub.
